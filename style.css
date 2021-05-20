@@ -1,0 +1,302 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color:rgb(80, 7, 80);
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+.logo {
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-size: 20px;
+    cursor: pointer;
+    left: -18%;
+}
+
+.nav-links {
+    display: flex;
+    width: 20%;
+    justify-content: space-around;
+    right: -17%;
+    text-transform: uppercase;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    color:white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.nav-links a:hover {
+    color: rgb(196, 105, 196);
+    transition: all 0.2s ease;
+}
+
+.burger {
+    display: none;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.3s ease;
+    
+}
+
+@media screen and (max-width:1024px){
+    .nav-links{
+        width: 70%;
+    }
+}
+ 
+@media screen and (max-width:768px){
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: #A7039B;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 40%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .nav-links li{
+        opacity: 1;
+    }
+    .burger{
+        display: block;
+        left: 0%
+    }
+}
+.nav-active{
+    transform: translateX(0%);
+}
+ 
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+ 
+.toggle .line1{
+     transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+
+img {
+    opacity: 0.5;
+    width: 100%;
+    height: 992px;
+    position: absolute;
+}
+.bvd {
+    padding-left: 15%;
+    position: absolute;
+    top: 300px;
+    letter-spacing: -1px;
+    font-family: 'Poppins', sans-serif;
+    color: rgb(196, 105, 196);
+}
+
+.titulo {
+    position: absolute;
+    padding-left: 15%;
+    top: 320px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+.links a {
+   list-style:none;
+   text-decoration: none;
+   color: white;
+   cursor:pointer;
+   font-size: 16px;
+   font-weight: bold;
+   font-family: 'Poppins', sans-serif;
+   text-align: center;
+}
+
+.cad:hover, .sobresla:hover, .links a:hover {
+    background-color:white; 
+    color:rgb(80, 7, 80);
+    transition: all 0.2s ease;
+}
+
+.cad, .sobresla {
+    border-style:solid;
+    border-width: 2px;
+    border-color: white;   
+    display: inline-flex;
+    top: 350px;
+    align-items: center;
+    cursor: pointer;
+    padding-left: 8px;
+}
+
+.cad {
+    margin-left: 15%;
+    width: 97px;
+    height: 40px;
+}
+
+.sobresla {
+    margin-left: 5px;
+    width: 116px;
+    height: 40px;
+}
+
+.form-login {  
+    border:none;
+    display: block;
+    width: 400px;
+    height: 300px;
+    top: 150px;
+    left: 35%;
+}
+
+.login-title {
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    margin-left:40%;
+}
+
+form{
+    position: absolute;
+    margin-top: 60px;
+    padding-bottom: 30px;
+    font-family: 'Poppins', sans-serif;
+    padding-left: 35px;
+    
+}
+
+.input-rm, .input-pass {
+    text-align:center;
+    border:none;
+    background-color: rgb(233, 153, 233);
+    border-bottom-style: solid;
+    border-width: 3px;
+    border-color: rgb(196, 105, 196);
+    margin-bottom: 15px;
+    width: 250px;
+    height: 40px;
+}
+
+.input-rm{
+    margin-left:22px;
+}
+
+.lbl-rm, .lbl-pass{
+  color: rgb(230, 193, 230);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.lbl-pass{
+    margin-left:-9px;
+}
+
+.login-btn, .frgt {
+   background: none;
+   border:none;
+   text-decoration:none;
+}
+
+.login-btn{
+   margin-left: 115px;
+   margin-bottom: 10px;
+   cursor: pointer;
+   background-color:  rgb(196, 105, 196);
+   padding: 3px;
+   width: 120px;
+   height:37px;
+   font-size: 20px;
+   color: rgb(230, 193, 230);
+   text-transform: uppercase;
+}
+
+.login-btn:hover {
+    background-color:  rgb(145, 56, 145);
+    transition: all 0.2s ease;
+    color: white;
+}
+
+.frgt{
+    margin-left: 120px;
+    font-size: 13px;
+    color:    rgb(233, 153, 233);
+}
+
+.frgt:hover {
+    color: rgb(255, 255, 255);
+}
+
+.cad-prof, .cad-aluno{
+    background-color:  rgb(230, 193, 230);
+    text-align:center;
+    width: 200px;
+    height: 200px; 
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor:pointer;
+    border-style:none;
+    top: 180px;
+}
+
+.cad-prof{
+    left: 32%;  
+}
+
+.cad-aluno{
+    left: 32%;
+    margin-left: 50px;
+}
+
+.cad-prof:hover, .cad-aluno:hover {
+    background-color:  rgb(145, 56, 145);
+    color: white;
+    transition: all 0.4s ease;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+
+
+
